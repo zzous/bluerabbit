@@ -1,7 +1,7 @@
 
 $(function(){
 	// mobile hambuger menu
-	$('.btn-expand').click(function(){
+	$('header').on('click', '.btn-expand', function(){
 		if($(this).hasClass('active')){
 			$(this).removeClass('active')
 			$('header .navigation').removeClass('active')

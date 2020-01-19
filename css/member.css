@@ -1,4 +1,4 @@
-
+/* login */
 .login { max-width: 480px; margin: 100px auto; padding: 0 20px; }
 .login ul li { margin-top: 18px; }
 .login ul li input { width: 100%; }
@@ -14,15 +14,20 @@
 .btn-login { width: 100%; height: 60px; line-height: 60px; margin-top: 35px; color: #fff; background: #d5d7da; transition-duration: .3s; }
 .btn-login.active { background: #3c3e44; }
 
-.join-link { display: flex; justify-content: space-between; margin-top: 40px; padding: 40px 0 0; border-top: 1px solid #c4c5c7; }
-.join-link .btn-type { margin: -8px 0 0 10px; white-space: nowrap; }
+.join-link { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding: 40px 0 0; border-top: 1px solid #c4c5c7; }
+.join-link .btn-type { margin-left: 10px; white-space: nowrap; }
 
-.simple-login { margin-top: 30px; }
+.simple-login { margin-top: 40px; }
 .simple-login h2 { position: relative; text-align: center; font-size: 12px; }
 .simple-login h2:before { content: ''; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: #c4c5c7; }
 .simple-login h2 span { position: relative; display: inline-block; padding: 0 15px; background: #fff; z-index: 1; }
 .simple-login ul { padding-top: 10px; }
+@media screen and (max-width: 800px) {
+	.join-link { padding-top: 30px; }
+	.simple-login { margin-top: 30px; }
+}
 
+/* join */
 .join { width: 480px; margin: 100px auto; }
 .join ul li { margin-top: 18px; }
 .join ul li .tit { padding-bottom: 5px; }
