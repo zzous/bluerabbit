@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>B.RABBIT</title>
+  <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/member.css" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../../js/ui.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <a href="#" class="btn-expand"><span></span><span></span><span></span></a>
+    <p class="logo"><a href="#"><img src="../../images/common/b-rabbit-logo.png" alt="B.RABBIT"></a></p>
+    <nav class="navigation">
+      <ul>
+        <li class="w-display"><a href="#">create</a></li>
+        <li><a href="#">marketplace</a></li>
+        <li><a href="#">designer</a></li>
+        <li><a href="#">gallery</a></li>
+        <li class="user">
+          <a href="#"><span class="blind">user</span></a>
+          <ul>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">마이스토어</a></li>
+            <li><a href="#">개인정보</a></li>
+            <li><a href="#">로그아웃</a></li>
+          </ul>
+        </li>
+        <li class="shopping-bag"><a href="#">shopping-bag</a></li class="shopping-bag">
+        <li class="business"><a href="#">business</a></li>
+        <li class="customer"><a href="#">고객센터</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- //header -->
+
+  <!-- container -->
+  <section>
+    <div class="login">
+      <h1 class="title">로그인</h1>
+      <ul>
+        <li>
+          <input type="text" placeholder="이메일" id="inpEmail">
+          <p class="txt-validation">가입되지 않은 이메일주소 입니다.</p>
+        </li>
+        <li>
+          <input type="password" placeholder="비밀번호" id="inpPassword">
+        </li>
+      </ul>
+      <div class="button">
+        <button type="button" class="btn-login">로그인</button>
+      </div>
+      <div class="login-util">
+        <span><a href="#">이메일찾기</a></span>
+        <span><a href="#">비밀번호재설정</a></span>
+      </div>
+      <div class="join-link">
+        <p>가입하시면 멋진 커스텀 서비스를 만날 수 있습니다.</p>
+        <a href="#" class="btn-type">회원가입</a>
+      </div>
+
+      <div class="simple-login">
+        <h2><span>간편 로그인</span></h2>
+        <ul>
+          <li><a href="#" class="btn-simple-login naver">naver</a></li>
+          <li><a href="#" class="btn-simple-login kakao">kakao</a></li>
+          <li><a href="#" class="btn-simple-login facebook">facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //container -->
+
+  <script>
+    $(function(){
+      // login button 활성화
+      $('input').on('keydown', function(){
+        let inpEmail = $('#inpEmail').val();
+        let inpPass = $('#inpPassword').val();
+        if(inpEmail != '' && inpPass != '') {
+          $('.btn-login').addClass('active')
+        } else {
+          $('.btn-login').removeClass('active')
+        }
+      });
+      // input validation
+      $('.btn-login').click(function(){
+        $('#inpEmail').addClass('caution')
+        $('.txt-validation').addClass('active')
+      });
+    });
+  </script>
+
+  <!-- footer -->
+  <footer>
+    <div class="inner">
+      <p class="logo"><a href="#"><span class="blind">B.RABBIT</span></a></p>
+      <ul class="terms-area">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+      </ul>
+      <div class="company-info">
+        <span>(주) 블루래빗팩토리</span>
+        <span>Tel. 070-0000-0000 </span>
+        <span>Fax. 02-0000-0000 </span>
+        <br class="m-display">
+        <span>Email. <a href="mailTo:contact@brabbit.com">contact@brabbit.com</a> </span>
+        <span>서울특별시 강남구 선릉로 428</span>
+        <br>
+        <span class="first">사업자 등록 번호 : 000-00-00000 </span>
+        <span>통신판매업 신고 : 2019-서울강남-0000 </span>
+        <br class="m-display">
+        <span>사업자 정보 확인 </span>
+        <span>대표이사 : 전영재</span>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer -->
+
+</body>
+
+</html>
