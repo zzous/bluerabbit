@@ -62,7 +62,7 @@ blockquote, q {quotes:none}
 caption span, legend {overflow:hidden;visibility:hidden;position:absolute;width:0;height:0;padding:0;margin:0;font-size:0;text-indent:-100%;white-space:nowrap;z-index:-1}
 .ellipsis {display:block;overflow:hidden; white-space:nowrap;text-overflow:ellipsis}
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block}
-input, textarea, select, button {font-family:'NotoL', sans-serif;font-size: 15px;color:#333;line-height:1.5;letter-spacing:0;vertical-align:middle;appearance: none;}
+input, textarea, select, button {font-family:'NotoL', sans-serif;font-size: 15px;color:#333;line-height:1.5;letter-spacing:0;vertical-align:middle;-webkit-appearance: none;box-shadow: none;}
 input, textarea {margin:0;padding:0}
 textarea {resize:none}
 
@@ -204,6 +204,9 @@ footer .company-info span.first { padding-left: 0; border: none; }
 	footer .inner { text-align: center; }
 	footer .terms-area li { height: 12px; line-height: 12px; font-size: 11px; }
 	footer .company-info br.m-display + span { padding-left: 0; border: none; }
+}
+@media screen and (max-width: 800px) {
+	footer .terms-area li { letter-spacing: -1px; height: 11px; line-height: 12px; font-size: 11px; }
 }
 
 /* title */
